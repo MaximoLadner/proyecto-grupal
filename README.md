@@ -1,12 +1,48 @@
-# React + Vite
+# 📝 Proyecto Notas/Clases
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+(NOMBRE) es una plataforma educativa diseñada como una solución universal y pública para optimizar la gestión de calificaciones académicas. La plataforma está diseñada para ofrecer una herramienta potente y fluida, enfocada exclusivamente en la administración de exámenes para docentes y tutores.
 
-Currently, two official plugins are available:
+## 📌 Estado del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ✨ Características y Funcionalidades Clave
 
-## Expanding the ESLint configuration
+- Gestión de Clases Personalizadas:
+  Los docentes pueden crear y personalizar sus clases de forma intuitiva, definiendo libremente las instancias evaluativas que mejor se adapten a sus necesidades pedagógicas.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Invitaciones Flexibles:
+  Facilita la incorporación de estudiantes mediante un código de invitación único por clase o mediante correo electrónico.
+
+- Administración Eficiente de Calificaciones:
+  Permite a los docentes registrar, editar y gestionar las calificaciones de los exámenes de manera rápida y segura.
+
+- Acceso Seguro para Estudiantes:
+  Los alumnos tienen acceso privado a sus calificaciones en tiempo real, garantizando la transparencia y la disponibilidad de la información.
+
+- Roles Versátiles:
+  Un mismo usuario puede desempeñar el rol de profesor en sus propias clases y, al mismo tiempo, ser alumno en otras, lo que aumenta la flexibilidad y adaptabilidad de la plataforma.
+
+- Arquitectura Optimizada:
+  La aplicación está construida sobre una base sólida para asegurar una experiencia de usuario fluida y un alto rendimiento.
+
+## 🛠️ Tecnologías Utilizadas
+
+- Frontend: React, JavaScript, TailwindCSS.
+
+- Backend: [Node.js, Python/Django, etc. (a decidir)]
+
+- Base de Datos: [PostgreSQL, MongoDB, etc. (a decidir)]
+
+- Autenticación: [JWT, OAuth2, etc. (a decidir. para tema usuarios.)]
+
+- Despliegue: [Netlify, Vercel, AWS, etc. (a decidir)]
+
+## 💡 Propósito y Alcance
+
+Este proyecto fue desarrollado como parte de la Tecnicatura Universitaria en Programación en UTN Facultad Regional San Nicolás. El objetivo principal es servir como un proyecto integrador que demuestre la aplicación y el dominio de todas las tecnologías y metodologías de desarrollo de software aprendidas a lo largo de la carrera.
+
+## 👥 Miembros del Equipo
+
+- **[Bogado, Nicolas Andrés]** - [Roles: ...]
+- **[Fernandez, Tomás]** - [Roles: ...]
+- **[Garrone, Santino]** - [Roles: ...]
+- **[Ladner, Máximo]** - [Roles: ...]
