@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link } from 'wouter';
+import groupIcon from '../../images/group.png';
+import file from '../../images/file.png'; analysis
+import analysis from '../../images/analysis.png';
 
 export default function HomeGeneral() {
   return (
@@ -84,7 +87,7 @@ export default function HomeGeneral() {
               <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <div className="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-lg">
                   <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-[var(--primary-color)]">
-                    <img src="../../images/group.png" alt="icono simbolico de alumnos" />
+                    <img src={groupIcon} alt="icono simbolico de alumnos" className="h-6 w-6 object-contain" />
                   </div>
                   <h3 className="text-lg font-semibold text-[var(--text-primary)]">
                     Gestión de Estudiantes
@@ -96,7 +99,7 @@ export default function HomeGeneral() {
                 </div>
                 <div className="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-lg">
                   <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-[var(--primary-color)]">
-                    <span className="material-symbols-outlined">upload_file</span>
+                    <img src={file} alt="icono simbolico de carga de notas" className="h-6 w-6 object-contain" />
                   </div>
                   <h3 className="text-lg font-semibold text-[var(--text-primary)]">
                     Carga de Calificaciones
@@ -108,7 +111,7 @@ export default function HomeGeneral() {
                 </div>
                 <div className="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-lg">
                   <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-[var(--primary-color)]">
-                    <span className="material-symbols-outlined">analytics</span>
+                    <img src={analysis} alt="icono simbolico de analytics" className="h-6 w-6 object-contain" />
                   </div>
                   <h3 className="text-lg font-semibold text-[var(--text-primary)]">
                     Análisis de Rendimiento
