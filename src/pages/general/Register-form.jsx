@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "wouter";
-import PopupRol from "../popup-component/PopupRol";
+import PopupRol from "../../components/popup-component/PopupRol";
 
 export default function RegisterForm()
 {
