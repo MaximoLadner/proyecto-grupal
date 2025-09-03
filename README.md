@@ -36,6 +36,8 @@
 
 - Despliegue: [Netlify, Vercel, AWS, etc. (a decidir)]
 
+- Bibliotecas: React-Hook-Form, Wouter, Zustand
+
 ## 💡 Propósito y Alcance
 
 Este proyecto fue desarrollado como parte de la Tecnicatura Universitaria en Programación en UTN Facultad Regional San Nicolás. El objetivo principal es servir como un proyecto integrador que demuestre la aplicación y el dominio de todas las tecnologías y metodologías de desarrollo de software aprendidas a lo largo de la carrera.
