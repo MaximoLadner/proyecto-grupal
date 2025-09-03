@@ -136,9 +136,9 @@ export default function HomeGeneral() {
                 calificaciones y mejorar la colaboración en el aula.
               </p>
               <div className="mt-8">
-                <button className="flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md bg-[var(--primary-color)] px-8 text-base font-semibold text-white shadow-lg transition-transform hover:scale-105">
+                {/* <button className="flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md bg-[var(--primary-color)] px-8 text-base font-semibold text-white shadow-lg transition-transform hover:scale-105">
                   <span className="truncate">Comenzar ahora</span>
-                </button>
+                </button> */}
               </div>
             </div>
           </section>
