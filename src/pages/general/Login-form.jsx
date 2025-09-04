@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
-
-export default function LoginForm()
-{
+import imageRegister from "../../images/imageRegister.jpg";
+export default function LoginForm() {
   return (
     <div
       className="relative flex min-h-screen flex-col justify-between overflow-x-hidden p-6 bg-gray-50 md:flex-row md:items-center md:justify-center"
@@ -11,7 +10,7 @@ export default function LoginForm()
       {/* Columna izquierda (imagen opcional) */}
       <div className="hidden md:flex md:w-1/2 items-center justify-center">
         <img
-          src="https://via.placeholder.com/400x400.png?text=Login"
+          src={imageRegister}
           alt="Login"
           className="max-w-sm rounded-xl shadow-lg"
         />

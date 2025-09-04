@@ -1,10 +1,21 @@
-import React from 'react'
+import React from "react";
+import Calendario from "../../components/calendario/Calendario";
+import SideBarAlumno from "../../components/sidebar/sidebar-alumno";
 
 export default function HomeAlumno() {
   return (
-    <div>
-      <h1>soy el alumno</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quia aspernatur debitis delectus deleniti dolor reiciendis sint cupiditate quae quo? Iusto corrupti iure numquam. Quam repellendus minima aspernatur nam quas!</p>
-    </div>
-  )
+    <>
+      <div className="flex">
+        {/* Sidebar a la izquierda */}
+        <aside className="w-64 bg-gray-100 shadow-lg">
+          <SideBarAlumno />
+        </aside>
+
+        {/* Calendario en el medio */}
+        <main className="flex-1 p-4">
+          <Calendario />
+        </main>
+      </div>
+    </>
+  );
 }
