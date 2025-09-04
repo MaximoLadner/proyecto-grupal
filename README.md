@@ -32,7 +32,7 @@
 
 - Base de Datos: [PostgreSQL, MongoDB, etc. (a decidir)]
 
-- Autenticación: [JWT, OAuth2, etc. (a decidir. para tema usuarios.)]git
+- Autenticación: [JWT, OAuth2, etc. (a decidir. para tema usuarios.)]
 
 - Despliegue: [Netlify, Vercel, AWS, etc. (a decidir)]
 

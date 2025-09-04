@@ -1,6 +1,6 @@
 import { Route, Router } from "wouter";
 import React, { Suspense, lazy } from "react";
-import Spinner from "./component/spinners/spinner-global";
+import Spinner from "./components/spinners/spinner-global";
 
 // Aca cargamos los componentes que van a tener el spinner.
 const HomeGeneral = lazy(() => import("./pages/general/home-general"));
