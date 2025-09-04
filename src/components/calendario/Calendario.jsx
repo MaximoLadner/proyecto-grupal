@@ -63,7 +63,7 @@ export default function Calendario() {
         <div className="bg-white p-6 rounded-lg shadow-sm"></div>
 
         {/* Calendar */}
-        <div className="mt-8 bg-white p-6 rounded-lg shadow-sm">
+        <div className="mt-8 bg-white  rounded-lg shadow-sm">
           <div className="flex justify-between items-center mb-6">
             <button className="text-gray-500 hover:text-gray-700">
               <span className="material-icons"> ⬅️ </span>
@@ -91,7 +91,7 @@ export default function Calendario() {
             {days.map((d, i) => (
               <div
                 key={i}
-                className={`relative bg-white p-2 h-20 sm:h-28 md:h-32 text-right ${
+                className={`relative bg-white p-2 h-14 sm:h-16 md:h-20 text-right ${
                   d.isCurrentMonth ? "text-gray-800" : "text-gray-400"
                 }`}
               >
