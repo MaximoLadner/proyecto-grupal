@@ -3,6 +3,8 @@ import React from "react";
 export default function Calendario() {
   const weekDays = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
 
+  
+
   // Días del calendario con eventos
   const days = [
     { day: 29, isCurrentMonth: false },
@@ -54,11 +56,10 @@ export default function Calendario() {
   ];
 
   return (
-    <div className="flex h-screen bg-gray-50 font-sans">
-      {}
+    <div className="flex bg-gray-50 font-sans">
 
       {/* Main */}
-      <main className="flex-1 p-8 ">
+      <main className="flex-1 ">
         {/* User header */}
         <div className="bg-white p-6 rounded-lg shadow-sm"></div>
 
@@ -89,7 +90,8 @@ export default function Calendario() {
 
             {/* Días */}
             {days.map((d, i) => (
-              <div
+              <button className="cursor-pointer">
+                <div
                 key={i}
                 className={`relative bg-white p-2 h-14 sm:h-16 md:h-20 text-right ${
                   d.isCurrentMonth ? "text-gray-800" : "text-gray-400"
@@ -103,24 +105,8 @@ export default function Calendario() {
                 ) : (
                   <span>{d.day}</span>
                 )}
-
-                {/* Eventos */}
-                {d.events &&
-                  d.events.map((ev, idx) => (
-                    <div
-                      key={idx}
-                      className={`mt-1 text-xs rounded-md p-1 text-left ${
-                        ev.color === "blue"
-                          ? "bg-blue-100 text-blue-800"
-                          : ev.color === "green"
-                          ? "bg-green-100 text-green-800"
-                          : "bg-red-100 text-red-800"
-                      }`}
-                    >
-                      {ev.title}
-                    </div>
-                  ))}
               </div>
+              </button>
             ))}
           </div>
         </div>

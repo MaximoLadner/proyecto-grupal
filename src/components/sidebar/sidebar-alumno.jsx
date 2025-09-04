@@ -7,20 +7,20 @@ import calendario from "../../images/calendario.png";
 
 export default function SideBarAlumno() {
   return (
-    <aside className="flex flex-col justify-between gap-1  bg-white shadow-gray-300 rounded-2xl w-fit h-full text-[0D0E0E]">
+    <aside className="flex flex-col justify-between gap-1  bg-white shadow-gray-300 rounded-2xl w-fit h-full text-[0D0E0E] fixed">
       <div className="gap-1">
-        <div className="w-55 flex flex-row items-center gap-2">
+        <div className="w-55 flex flex-row items-center gap-2 ml-4">
           <img
             src=""
             alt="foto alumno"
             className="rounded-[50%] shadow-gray-300 shadow-2xl w-14 h-14"
           />
-          <div>
+          <div className="ml-4">
             <h4 className="font-semibold">Nombre Alumno</h4>
             <p className="text-gray-700 italic">email@email.com</p>
           </div>
         </div>
-        <div className="flex flex-col gap-2 mt-4 text-[#212122] font-normal">
+        <div className="flex flex-col gap-2 mt-4 text-[#212122] font-normal ml-4">
           <Link className="w-55 rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-sm transition-all duration-200">
             <img src={mas} alt="Signo de mas" className="w-5 h-5 mr-1" />
             Mis clases
@@ -43,7 +43,7 @@ export default function SideBarAlumno() {
           </Link>
         </div>
       </div>
-      <div>
+      <div className="ml-4">
         <Link className="w-55 rounded-2xl flex flex-row h-12 items-center gap-1 font-normal text-gray-700">
           <img src="" alt="svg de perfil" className="w-8 h-8" />
           Mi Perfil
