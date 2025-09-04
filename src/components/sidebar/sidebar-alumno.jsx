@@ -7,7 +7,7 @@ import calendario from "../../images/calendario.png";
 
 export default function SideBarAlumno() {
   return (
-    <aside className="flex flex-col justify-between gap-1  bg-white shadow-gray-300 rounded-2xl w-fit h-full text-[0D0E0E] fixed">
+    <div className="flex flex-col justify-between gap-1 m-1 mr-0 bg-white shadow-gray-300 rounded-2xl w-fit h-full text-[0D0E0E] fixed">
       <div className="gap-1">
         <div className="w-55 flex flex-row items-center gap-2 ml-4">
           <img
@@ -53,6 +53,6 @@ export default function SideBarAlumno() {
           Cerrar sesión
         </Link>
       </div>
-    </aside>
+    </div>
   );
 }
