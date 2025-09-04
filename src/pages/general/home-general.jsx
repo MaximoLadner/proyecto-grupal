@@ -1,8 +1,9 @@
-import React from 'react'
-import { Link } from 'wouter';
-import groupIcon from '../../images/group.png';
-import file from '../../images/file.png'; analysis
-import analysis from '../../images/analysis.png';
+import React from "react";
+import { Link } from "wouter";
+import groupIcon from "../../images/group.png";
+import file from "../../images/file.png";
+analysis;
+import analysis from "../../images/analysis.png";
 
 export default function HomeGeneral() {
   return (
@@ -26,17 +27,17 @@ export default function HomeGeneral() {
               EduConnect
             </h2>
           </div>
-          
+
           <div className="flex items-center gap-4">
-           <Link href="/Login">
-             <button className="flex h-10 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md px-4 text-sm font-semibold text-[var(--primary-color)] transition-colors hover:bg-[var(--secondary-color)]">
-              <span className="truncate">Iniciar Sesión</span>
-            </button>
-           </Link>
+            <Link href="/Login">
+              <button className="flex h-10 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md px-4 text-sm font-semibold text-[var(--primary-color)] transition-colors hover:bg-[var(--secondary-color)]">
+                <span className="truncate">Iniciar Sesión</span>
+              </button>
+            </Link>
             <Link href="/Register">
-                <button className="flex h-10 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md bg-[#137fec] px-4 text-sm font-semibold text-white shadow-sm transition-all hover:bg-white-600 focus-visible:outline-offset-2 focus-visible:outline-blue-500">
-              <span className="truncate">Registrarse</span>
-            </button>
+              <button className="flex h-10 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md bg-[#137fec] px-4 text-sm font-semibold text-white shadow-sm transition-all hover:bg-white-600 focus-visible:outline-offset-2 focus-visible:outline-blue-500">
+                <span className="truncate">Registrarse</span>
+              </button>
             </Link>
           </div>
         </header>
@@ -51,12 +52,11 @@ export default function HomeGeneral() {
                   Conecta, colabora y califica con facilidad
                 </h1>
                 <p className="text-lg text-[var(--text-secondary)]">
-                  EduConnect es la plataforma definitiva para profesores y estudiantes,
-                  que simplifica la gestión de calificaciones y fomenta un entorno de
-                  aprendizaje colaborativo.
+                  EduConnect es la plataforma definitiva para profesores y
+                  estudiantes, que simplifica la gestión de calificaciones y
+                  fomenta un entorno de aprendizaje colaborativo.
                 </p>
                 <div className="mt-4 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-    
                   <button className="flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md border border-gray-300 bg-[#137fec] px-6 text-base font-semibold text-white shadow-sm transition-transform hover:scale-105">
                     <span className="truncate">Empezar</span>
                   </button>
@@ -80,45 +80,58 @@ export default function HomeGeneral() {
                   Características Clave
                 </h2>
                 <p className="mt-4 text-lg text-[var(--text-secondary)]">
-                  EduConnect ofrece un conjunto completo de herramientas diseñadas para
-                  mejorar la experiencia de enseñanza y aprendizaje.
+                  EduConnect ofrece un conjunto completo de herramientas
+                  diseñadas para mejorar la experiencia de enseñanza y
+                  aprendizaje.
                 </p>
               </div>
               <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <div className="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-lg">
                   <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-[var(--primary-color)]">
-                    <img src={groupIcon} alt="icono simbolico de alumnos" className="h-6 w-6 object-contain" />
+                    <img
+                      src={groupIcon}
+                      alt="icono simbolico de alumnos"
+                      className="h-6 w-6 object-contain"
+                    />
                   </div>
                   <h3 className="text-lg font-semibold text-[var(--text-primary)]">
                     Gestión de Estudiantes
                   </h3>
                   <p className="text-sm text-[var(--text-secondary)]">
-                    Administra fácilmente la información de tus estudiantes y realiza un
-                    seguimiento de su progreso académico.
+                    Administra fácilmente la información de tus estudiantes y
+                    realiza un seguimiento de su progreso académico.
                   </p>
                 </div>
                 <div className="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-lg">
                   <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-[var(--primary-color)]">
-                    <img src={file} alt="icono simbolico de carga de notas" className="h-6 w-6 object-contain" />
+                    <img
+                      src={file}
+                      alt="icono simbolico de carga de notas"
+                      className="h-6 w-6 object-contain"
+                    />
                   </div>
                   <h3 className="text-lg font-semibold text-[var(--text-primary)]">
                     Carga de Calificaciones
                   </h3>
                   <p className="text-sm text-[var(--text-secondary)]">
-                    Carga y organiza las calificaciones de los estudiantes de forma
-                    eficiente, con opciones de importación y exportación.
+                    Carga y organiza las calificaciones de los estudiantes de
+                    forma eficiente, con opciones de importación y exportación.
                   </p>
                 </div>
                 <div className="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-lg">
                   <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-[var(--primary-color)]">
-                    <img src={analysis} alt="icono simbolico de analytics" className="h-6 w-6 object-contain" />
+                    <img
+                      src={analysis}
+                      alt="icono simbolico de analytics"
+                      className="h-6 w-6 object-contain"
+                    />
                   </div>
                   <h3 className="text-lg font-semibold text-[var(--text-primary)]">
                     Análisis de Rendimiento
                   </h3>
                   <p className="text-sm text-[var(--text-secondary)]">
-                    Obtén información valiosa sobre el rendimiento de los estudiantes con
-                    herramientas de análisis integradas.
+                    Obtén información valiosa sobre el rendimiento de los
+                    estudiantes con herramientas de análisis integradas.
                   </p>
                 </div>
               </div>
@@ -132,14 +145,16 @@ export default function HomeGeneral() {
                 Transforma tu experiencia de enseñanza con EduConnect
               </h2>
               <p className="mt-4 text-lg text-[var(--text-secondary)]">
-                Regístrate hoy y descubre cómo EduConnect puede simplificar la gestión de
-                calificaciones y mejorar la colaboración en el aula.
+                Regístrate hoy y descubre cómo EduConnect puede simplificar la
+                gestión de calificaciones y mejorar la colaboración en el aula.
               </p>
+
               <div className="mt-8">
                 {/* <button className="flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md bg-[var(--primary-color)] px-8 text-base font-semibold text-white shadow-lg transition-transform hover:scale-105">
                   <span className="truncate">Comenzar ahora</span>
                 </button> */}
               </div>
+
             </div>
           </section>
         </main>
@@ -149,16 +164,28 @@ export default function HomeGeneral() {
           <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
             <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-4 md:order-2">
-                <a className="text-sm text-gray-500 hover:text-gray-900" href="#">
+                <a
+                  className="text-sm text-gray-500 hover:text-gray-900"
+                  href="#"
+                >
                   Acerca de
                 </a>
-                <a className="text-sm text-gray-500 hover:text-gray-900" href="#">
+                <a
+                  className="text-sm text-gray-500 hover:text-gray-900"
+                  href="#"
+                >
                   Contacto
                 </a>
-                <a className="text-sm text-gray-500 hover:text-gray-900" href="#">
+                <a
+                  className="text-sm text-gray-500 hover:text-gray-900"
+                  href="#"
+                >
                   Términos de Servicio
                 </a>
-                <a className="text-sm text-gray-500 hover:text-gray-900" href="#">
+                <a
+                  className="text-sm text-gray-500 hover:text-gray-900"
+                  href="#"
+                >
                   Política de Privacidad
                 </a>
               </div>
