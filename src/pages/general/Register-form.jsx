@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "wouter";
 import PopupRol from "../../components/popup-component/PopupRol";
+import imageRegister from "../../images/imageRegister.jpg";
 
-export default function RegisterForm()
-{
+export default function RegisterForm() {
   const [role, setRole] = useState("Teacher");
   const [showModal, setShowModal] = useState(false);
 
@@ -16,7 +16,7 @@ export default function RegisterForm()
         {/* Columna izquierda (imagen en desktop pero desaparece en mobile) */}
         <div className="hidden md:flex md:w-1/2 items-center justify-center">
           <img
-            src="https://via.placeholder.com/400x400.png?text=Registro"
+            src={imageRegister}
             alt="Registro"
             className="w-64 h-auto rounded-xl shadow-lg md:w-80 lg:w-96"
           />
