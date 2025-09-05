@@ -4,18 +4,16 @@ import SideBarAlumno from "../../components/sidebar/sidebar-alumno";
 
 export default function HomeAlumno() {
   return (
-    <>
-      <div className="flex h-screen mr-5 ">
-        {/* Sidebar a la izquierda */}
-        <aside className="w-64 bg-gray-100 shadow-lg ">
-          <SideBarAlumno />
-        </aside>
-
+    <main className="flex flex-row w-screen h-screen gap-[1rem] p-[1rem] bg-gray-200">
+      {/* Sidebar a la izquierda */}
+      <SideBarAlumno />
+      <section className="flex-1">
+        <div className="flex items-center justify-center text-2xl h-20 rounded-2xl bg-white">
+          <h1>Header</h1>
+        </div>
         {/* Calendario en el medio */}
-        <main className="flex-1">
-          <Calendario />
-        </main>
-      </div>
-    </>
+        <Calendario />
+      </section>
+    </main>
   );
 }

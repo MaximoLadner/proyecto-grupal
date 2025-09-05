@@ -3,8 +3,6 @@ import React from "react";
 export default function Calendario() {
   const weekDays = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
 
-  
-
   // Días del calendario con eventos
   const days = [
     { day: 29, isCurrentMonth: false },
@@ -56,42 +54,34 @@ export default function Calendario() {
   ];
 
   return (
-    <div className="flex bg-gray-50 font-sans">
+    <div className="flex-1 mt-8">
+      {/* Calendar */}
+      <div className="pt-6 bg-white  rounded-2xl shadow-sm">
+        <div className="flex justify-between items-center mb-6">
+          <button className="text-gray-500 hover:text-gray-700">
+            <span className="material-icons"> ⬅️ </span>
+          </button>
+          <h2 className="text-xl font-semibold text-gray-800">Octubre 2024</h2>
+          <button className="text-gray-500 hover:text-gray-700">
+            <span className="material-icons"> ➡️ </span>
+          </button>
+        </div>
 
-      {/* Main */}
-      <main className="flex-1 ">
-        {/* User header */}
-        <div className="bg-white p-6 rounded-lg shadow-sm"></div>
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-px bg-gray-200 border border-gray-200">
+          {/* Encabezados */}
+          {weekDays.map((d, i) => (
+            <div
+              key={i}
+              className="text-center py-2 bg-white text-gray-600 font-medium"
+            >
+              {d}
+            </div>
+          ))}
 
-        {/* Calendar */}
-        <div className="mt-8 bg-white  rounded-lg shadow-sm">
-          <div className="flex justify-between items-center mb-6">
-            <button className="text-gray-500 hover:text-gray-700">
-              <span className="material-icons"> ⬅️ </span>
-            </button>
-            <h2 className="text-xl font-semibold text-gray-800">
-              Octubre 2024
-            </h2>
-            <button className="text-gray-500 hover:text-gray-700">
-              <span className="material-icons"> ➡️ </span>
-            </button>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-px bg-gray-200 border border-gray-200">
-            {/* Encabezados */}
-            {weekDays.map((d, i) => (
+          {/* Días */}
+          {days.map((d, i) => (
+            <button className="cursor-pointer">
               <div
-                key={i}
-                className="text-center py-2 bg-white text-gray-600 font-medium"
-              >
-                {d}
-              </div>
-            ))}
-
-            {/* Días */}
-            {days.map((d, i) => (
-              <button className="cursor-pointer">
-                <div
                 key={i}
                 className={`relative bg-white p-2 h-14 sm:h-16 md:h-20 text-right ${
                   d.isCurrentMonth ? "text-gray-800" : "text-gray-400"
@@ -106,11 +96,10 @@ export default function Calendario() {
                   <span>{d.day}</span>
                 )}
               </div>
-              </button>
-            ))}
-          </div>
+            </button>
+          ))}
         </div>
-      </main>
+      </div>
     </div>
   );
 }
