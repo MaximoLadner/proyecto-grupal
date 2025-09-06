@@ -8,7 +8,7 @@ export default function HomeAlumno() {
 
   const componentes = {
     calendario: <Calendario />,
-    clases: <MisClases />,
+    
   };
   return (
     <main className="flex flex-row w-screen h-screen gap-[1rem] p-[1rem] bg-gray-200">
