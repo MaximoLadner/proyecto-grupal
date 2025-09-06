@@ -53,10 +53,11 @@ export default function Calendario() {
     { day: 2, isCurrentMonth: false },
   ];
 
+  // ...existing code...
   return (
-    <div className="flex-1 mt-8">
+    <div className="flex-1 mt-5 max-h- ">
       {/* Calendar */}
-      <div className="pt-6 bg-white  rounded-2xl shadow-sm">
+      <div className="pt-6 bg-white rounded-2xl shadow-sm">
         <div className="flex justify-between items-center mb-6">
           <button className="text-gray-500 hover:text-gray-700">
             <span className="material-icons"> ⬅️ </span>
@@ -80,10 +81,9 @@ export default function Calendario() {
 
           {/* Días */}
           {days.map((d, i) => (
-            <button className="cursor-pointer">
+            <button className="cursor-pointer" key={i}>
               <div
-                key={i}
-                className={`relative bg-white p-2 h-14 sm:h-16 md:h-20 text-right ${
+                className={`relative bg-white p-1 h-14 sm:h-16 md:h-16 text-right ${
                   d.isCurrentMonth ? "text-gray-800" : "text-gray-400"
                 }`}
               >

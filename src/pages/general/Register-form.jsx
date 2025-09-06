@@ -10,7 +10,7 @@ export default function RegisterForm() {
   return (
     <>
       <div
-        className="relative flex h-screen flex-col items-center justify-center overflow-x-hidden bg-gray-50 p-4 md:flex-row md:items-center md:justify-center md:p-6"
+        className="relative flex  flex-col items-center justify-center overflow-x-hidden bg-gray-50 p-4 md:flex-row md:items-center md:justify-center md:p-6"
         style={{ fontFamily: "Roboto, sans-serif" }}
       >
         {/* Columna izquierda (imagen en desktop pero desaparece en mobile) */}
@@ -18,7 +18,7 @@ export default function RegisterForm() {
           <img
             src={imageRegister}
             alt="Registro"
-            className="w-64 h-auto rounded-xl shadow-lg md:w-80 lg:w-96"
+            className="w-64 h-auto rounded-xl shadow-lg md:w-56 lg:max-w-64"
           />
         </div>
 
@@ -32,7 +32,7 @@ export default function RegisterForm() {
           </div>
 
           {/* Form */}
-          <div className="mt-6 flex flex-col gap-6 flex-1 justify-center">
+          <div className="mt-6 flex flex-col gap-6 justify-start">
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-1">
                 <label
@@ -95,7 +95,7 @@ export default function RegisterForm() {
                     />
                   </div>
 
-                  <div className="flex items-center gap-3 rounded-md border border-dashed border-gray-400 bg-gray-100 p-3 sm:p-4">
+                  <div className="flex items-center gap-3 rounded-md border border-dashed border-gray-400 bg-gray-100 p-1.5 sm:p-1">
                     <div className="flex size-10 items-center justify-center rounded-full bg-gray-200 text-gray-500 sm:size-12">
                       📷
                     </div>
