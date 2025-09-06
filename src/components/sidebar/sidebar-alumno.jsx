@@ -27,7 +27,7 @@ export default function SideBarAlumno({ onChangeVista }) {
         {/* Menú principal */}
         <div className="flex flex-col gap-2 mt-4 text-[#212122] font-normal ml-4">
           <button
-            onClick={() => onChangeVista("clases")}
+            onClick={() => onChangeVista("")}
             className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-sm transition-all duration-200"
           >
             <img src={mas} alt="Signo de mas" className="w-5 h-5 mr-1" />
@@ -35,7 +35,7 @@ export default function SideBarAlumno({ onChangeVista }) {
           </button>
 
           <button
-            onClick={() => onChangeVista("calificaciones")}
+            onClick={() => onChangeVista("")}
             className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-sm transition-all duration-200"
           >
             <img src={list} alt="svg de una lista" className="w-5 h-5 mr-1" />

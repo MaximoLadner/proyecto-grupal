@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import Calendario from "../../components/calendario/Calendario";
+import Calendario from "../../components/Calendario/Calendario";
 import SideBarAlumno from "../../components/sidebar/sidebar-alumno";
-import MisClases from "../../components/Clases/MisClases";
-
+import DashBoard from "../../components/dashboard/dashboard";
 export default function HomeAlumno() {
+  // 👈 Vista inicial: dashboard
   const [vista, setVista] = useState("dashboard");
 
   const componentes = {
+    dashboard: <DashBoard />,
     calendario: <Calendario />,
-    
   };
+
   return (
     <main className="flex flex-row w-screen h-screen gap-[1rem] p-[1rem] bg-gray-200">
       {/* Sidebar controla la vista */}

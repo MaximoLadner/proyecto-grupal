@@ -7,7 +7,7 @@ import perfil from "../../images/perfil.png";
 import cerrarSesion from "../../images/cerrar-sesion-de-usuario.png";
 import MisClases from "../Clases/MisClases";
 
-export default function SideBarAlumno({ onChangeVista }) {
+export default function SideBarProfesor({ onChangeVista }) {
   return (
     <aside className="flex flex-col justify-between gap-1 bg-white shadow-gray-300 rounded-2xl w-fit text-[#0D0E0E]">
       <div className="gap-1">
