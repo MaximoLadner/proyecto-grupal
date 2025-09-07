@@ -10,11 +10,11 @@ export default function SideBarProfesor({ onChangeVista }) {
   return (
     <aside className="flex flex-col justify-between gap-1 bg-white shadow-gray-300 rounded-2xl w-fit text-[#0D0E0E]">
       <div className="gap-1">
-        {/* Datos alumno */}
+        {/* Datos profesor */}
         <div className="w-55 flex flex-row items-center gap-2 ml-4">
           <img
             src=""
-            alt="foto alumno"
+              alt="foto profesor"
             className="rounded-[50%] shadow-gray-300 shadow-2xl w-14 h-14"
           />
           <div className="ml-4">
@@ -30,7 +30,7 @@ export default function SideBarProfesor({ onChangeVista }) {
             className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-sm transition-all duration-200"
           >
             <img src={mas} alt="Signo de mas" className="w-5 h-5 mr-1" />
-            Mis Clases
+            Nueva clase
           </button>
 
           <button
@@ -38,7 +38,7 @@ export default function SideBarProfesor({ onChangeVista }) {
             className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-sm transition-all duration-200"
           >
             <img src={list} alt="svg de una lista" className="w-5 h-5 mr-1" />
-            Mis calificaciones
+            Mis clases
           </button>
 
           <button
@@ -46,7 +46,7 @@ export default function SideBarProfesor({ onChangeVista }) {
             className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-sm transition-all duration-200"
           >
             <img src={unirse} alt="svg de un numero" className="w-5 h-5 mr-1" />
-            Unirme a una clase
+            Registrar calificaciones
           </button>
 
           <button
