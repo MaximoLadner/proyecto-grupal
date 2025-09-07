@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import MisClases from "../../components/Clases/MisClases";
+import MisClases from "../../components/Clases/mis-clases";
 import SideBarProfesor from "../../components/sidebar/sidebar-profesor";
-import Calendario from "../../components/Calendario/Calendario";
+import Calendario from "../../components/calendario/Calendario";
 import DashBoard from "../../components/dashboard/dashboard";
 
 export default function HomeProfesor() {

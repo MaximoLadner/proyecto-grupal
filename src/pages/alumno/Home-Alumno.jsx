@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Calendario from "../../components/Calendario/Calendario";
 import SideBarAlumno from "../../components/sidebar/sidebar-alumno";
 import DashBoard from "../../components/dashboard/dashboard";
+import Calendario from "../../components/calendario/Calendario";
 
 export default function HomeAlumno() {
   // Vista inicial: dashboard
@@ -22,7 +22,7 @@ export default function HomeAlumno() {
           className="text-gray-600 md:hidden"
           onClick={() => setSidebarOpen(!sidebarOpen)}
         >
-          <span className="material-icons">menu</span>
+          <span className="material-icons">Menu</span>
         </button>
 
         <h1 className="text-xl font-semibold text-gray-800">Header</h1>

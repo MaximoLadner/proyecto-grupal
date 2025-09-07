@@ -5,7 +5,6 @@ import unirse from "../../images/unirse.png";
 import calendario from "../../images/calendario.png";
 import perfil from "../../images/perfil.png";
 import cerrarSesion from "../../images/cerrar-sesion-de-usuario.png";
-import MisClases from "../Clases/MisClases";
 
 export default function SideBarProfesor({ onChangeVista }) {
   return (
@@ -19,7 +18,7 @@ export default function SideBarProfesor({ onChangeVista }) {
             className="rounded-[50%] shadow-gray-300 shadow-2xl w-14 h-14"
           />
           <div className="ml-4">
-            <h4 className="font-semibold">Nombre Alumno</h4>
+            <h4 className="font-semibold">Nombre Profesor</h4>
             <p className="text-gray-700 italic">email@email.com</p>
           </div>
         </div>

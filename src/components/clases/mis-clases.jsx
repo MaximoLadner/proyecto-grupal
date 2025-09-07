@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { z } from "zod";
+import * as z from "zod";
+
 // Esquema para validar la clase
 const classSchema = z.object({
   name: z.string().min(1, "El nombre no puede estar vacío"),

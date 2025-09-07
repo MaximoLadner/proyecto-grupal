@@ -4,10 +4,10 @@ import Spinner from "./components/spinners/spinner-global";
 
 // Aca cargamos los componentes que van a tener el spinner.
 const HomeGeneral = lazy(() => import("./pages/general/home-general"));
-const RegisterForm = lazy(() => import("./pages/general/Register-form"));
-const LoginForm = lazy(() => import("./pages/general/Login-form"));
+const RegisterForm = lazy(() => import("./pages/general/register-form"));
+const LoginForm = lazy(() => import("./pages/general/login-form"));
 const HomeAlumno = lazy(() => import("./pages/alumno/Home-Alumno"));
-const HomeProfesor = lazy(() => import("./pages/profesor/Home-Profesor"));
+const HomeProfesor = lazy(() => import("./pages/profesor/home-profesor"));
 
 function App() {
   return (

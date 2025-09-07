@@ -5,7 +5,6 @@ import unirse from "../../images/unirse.png";
 import calendario from "../../images/calendario.png";
 import perfil from "../../images/perfil.png";
 import cerrarSesion from "../../images/cerrar-sesion-de-usuario.png";
-import MisClases from "../Clases/MisClases";
 
 export default function SideBarAlumno({ onChangeVista }) {
   return (
