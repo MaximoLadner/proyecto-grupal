@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import Calendario from "../../components/Calendario/Calendario";
 import SideBarAlumno from "../../components/sidebar/sidebar-alumno";
 import DashBoard from "../../components/dashboard/dashboard";
+
 export default function HomeAlumno() {
-  // 👈 Vista inicial: dashboard
+  // Vista inicial: dashboard
   const [vista, setVista] = useState("dashboard");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const componentes = {
     dashboard: <DashBoard />,
@@ -12,21 +14,46 @@ export default function HomeAlumno() {
   };
 
   return (
-    <main className="flex flex-row w-screen h-screen gap-[1rem] p-[1rem] bg-gray-200">
-      {/* Sidebar controla la vista */}
-      <SideBarAlumno onChangeVista={setVista} />
+    <div className="flex flex-col h-screen bg-gray-100">
+      {/* HEADER */}
+      <header className="bg-white shadow-md p-4 flex justify-between items-center">
+        {/* Botón menú (solo móvil) */}
+        <button
+          className="text-gray-600 md:hidden"
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+        >
+          <span className="material-icons">menu</span>
+        </button>
 
-      <section className="flex-1 flex flex-col gap-4">
-        {/* Header */}
-        <div className="flex items-center justify-center text-2xl h-20 rounded-2xl bg-white">
-          <h1>Header</h1>
-        </div>
+        <h1 className="text-xl font-semibold text-gray-800">Header</h1>
+        <div className="w-8"></div>
+      </header>
 
-        {/* Contenido dinámico */}
-        <div className="flex-1 rounded-2xl bg-white p-4 overflow-auto">
-          {componentes[vista]}
-        </div>
-      </section>
-    </main>
+      <div className="flex flex-1">
+        {/* Overlay oscuro en mobile */}
+        <div
+          className={`fixed inset-0 bg-gray-800 bg-opacity-50 z-30 md:hidden ${
+            sidebarOpen ? "block" : "hidden"
+          }`}
+          onClick={() => setSidebarOpen(false)}
+        />
+
+        {/* SIDEBAR */}
+        <aside
+          className={`fixed z-40 md:static top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 md:translate-x-0 ${
+            sidebarOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          <SideBarAlumno onChangeVista={setVista} />
+        </aside>
+
+        {/* CONTENIDO */}
+        <main className="flex-1 p-4 overflow-y-auto">
+          <div className="rounded-2xl bg-white p-4 h-full">
+            {componentes[vista]}
+          </div>
+        </main>
+      </div>
+    </div>
   );
 }
