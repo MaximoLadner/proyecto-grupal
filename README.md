@@ -36,7 +36,7 @@ Notus es una plataforma educativa diseñada como una solución universal y públ
 
 - Despliegue: [Netlify, Vercel, AWS, etc. (a decidir)]
 
-- Bibliotecas: React-Hook-Form, Wouter, Zustand
+- Bibliotecas: React-Hook-Form, Wouter, Zustand, ZOD
 
 ## 💡 Propósito y Alcance
 
