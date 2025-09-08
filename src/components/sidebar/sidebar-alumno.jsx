@@ -9,7 +9,7 @@ import MisClasesAlumno from "../../components/clases/mis-clases-alumno";
 
 export default function SideBarAlumno({ onChangeVista }) {
   return (
-    <aside className="hidden md:flex flex-col justify-between m-[1rem] gap-1 bg-white shadow-gray-300 rounded-2xl w-fit text-[#0D0E0E]">
+    <aside className="flex flex-col justify-between gap-1 bg-white shadow-gray-300 w-fit text-[#0D0E0E] h-full">
       <div className="gap-1 mt-4">
         {/* Datos alumno */}
         <div className="w-55 flex flex-row items-center gap-2 ml-4">
