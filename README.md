@@ -1,6 +1,6 @@
-# 📝 Proyecto Notas/Clases
+# 📝 NOTUS
 
-(NOMBRE) es una plataforma educativa diseñada como una solución universal y pública para optimizar la gestión de calificaciones académicas. La plataforma está diseñada para ofrecer una herramienta potente y fluida, enfocada exclusivamente en la administración de exámenes para docentes y tutores.
+Notus es una plataforma educativa diseñada como una solución universal y pública para optimizar la gestión de calificaciones académicas. La plataforma está diseñada para ofrecer una herramienta potente y fluida, enfocada exclusivamente en la administración de exámenes para docentes y tutores.
 
 ## 📌 Estado del Proyecto
 
