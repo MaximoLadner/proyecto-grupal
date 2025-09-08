@@ -5,6 +5,7 @@ import unirse from "../../images/unirse.png";
 import calendario from "../../images/calendario.png";
 import perfil from "../../images/perfil.png";
 import cerrarSesion from "../../images/cerrar-sesion-de-usuario.png";
+import dashboard from "../../images/dashboard.png";
 
 export default function SideBarAlumno({ onChangeVista }) {
   return (
@@ -29,7 +30,7 @@ export default function SideBarAlumno({ onChangeVista }) {
             onClick={() => onChangeVista("dashboard")}
             className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-sm transition-all duration-200"
           >
-            <img src={mas} alt="Signo de mas" className="w-5 h-5 mr-1" />
+            <img src={dashboard} alt="Signo de mas" className="w-5 h-5 mr-1" />
             Dashboard
           </button>
 
