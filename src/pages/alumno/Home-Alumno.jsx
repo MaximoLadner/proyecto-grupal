@@ -5,6 +5,7 @@ import Calendario from "../../components/calendario/Calendario";
 import UnirseClase from "../../components/clases/unirse-clase";
 import PerfilAlumno from "../../components/perfil/Perfil-Alumno";
 import ClaseAlumno from "../../components/clases/mis-clases-alumno";
+import burguer from "../../images/burger-menu.png";
 
 export default function HomeAlumno() {
   // Vista inicial: dashboard
@@ -23,18 +24,18 @@ export default function HomeAlumno() {
     <div className="flex flex-col h-screen bg-gray-100">
       {/* HEADER */}
 
-      {/* Botón menú (solo móvil) */}
-      {/*       
-      <header className="bg-white shadow-md p-4 flex justify-between items-center">
+      <header className="flex bg-white shadow-md p-4 md:hidden justify-between items-center pr-8 pl-5">
+        <h1 className="text-xl font-semibold text-gray-800">Notus</h1>
+        {/* Botón menú (solo móvil) */}
         <button
-          className="text-gray-600 md:hidden"
+          className="flex justify-center items-center text-gray-600"
           onClick={() => setSidebarOpen(!sidebarOpen)}
         >
-          <span className="material-icons">Menu</span>
+          <span className="material-icons w-8 h-8">
+            <img src={burguer} alt="Menú" />
+          </span>
         </button>
-
-        <h1 className="text-xl font-semibold text-gray-800">Header</h1>
-      </header> */}
+      </header>
 
       <div className="flex flex-1">
         {/* Overlay oscuro en mobile */}
