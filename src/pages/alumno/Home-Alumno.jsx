@@ -4,6 +4,7 @@ import DashBoard from "../../components/dashboard/dashboard";
 import Calendario from "../../components/calendario/Calendario";
 import UnirseClase from "../../components/clases/unirse-clase";
 import PerfilAlumno from "../../components/perfil/Perfil-Alumno";
+import ClaseAlumno from "../../components/clases/mis-clases-alumno";
 import burguer from "../../images/burger-menu.png";
 
 export default function HomeAlumno() {

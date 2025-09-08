@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import MisClases from "../../components/Clases/mis-clases";
+import { useState } from "react";
 import SideBarProfesor from "../../components/sidebar/sidebar-profesor";
 import Calendario from "../../components/calendario/Calendario";
 import DashBoard from "../../components/dashboard/dashboard";
-
+import MisClases from "../../components/clases/mis-clases-profesor";
 export default function HomeProfesor() {
   const [vista, setVista] = useState("dashboard");
 
