@@ -6,6 +6,7 @@ import calendario from "../../images/calendario.png";
 import perfil from "../../images/perfil.png";
 import cerrarSesion from "../../images/cerrar-sesion-de-usuario.png";
 import dashboard from "../../images/dashboard.png";
+import MisClasesAlumno from "../../components/clases/mis-clases-alumno";
 
 export default function SideBarAlumno({ onChangeVista }) {
   return (
@@ -35,7 +36,7 @@ export default function SideBarAlumno({ onChangeVista }) {
           </button>
 
           <button
-            onClick={() => onChangeVista("")}
+            onClick={() => onChangeVista("clases")}
             className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-2.5 pl-2.5 hover:bg-[#137fec] hover:text-white hover:shadow-sm transition-all duration-200"
           >
             <img src={mas} alt="Signo de mas" className="w-5 h-5 mr-1" />

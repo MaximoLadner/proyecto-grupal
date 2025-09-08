@@ -4,6 +4,7 @@ import DashBoard from "../../components/dashboard/dashboard";
 import Calendario from "../../components/calendario/Calendario";
 import UnirseClase from "../../components/clases/unirse-clase";
 import PerfilAlumno from "../../components/perfil/Perfil-Alumno";
+import ClaseAlumno from "../../components/clases/mis-clases-alumno";
 
 export default function HomeAlumno() {
   // Vista inicial: dashboard
@@ -15,6 +16,7 @@ export default function HomeAlumno() {
     calendario: <Calendario />,
     unirse: <UnirseClase />,
     perfil: <PerfilAlumno />,
+    clases: <ClaseAlumno />,
   };
 
   return (

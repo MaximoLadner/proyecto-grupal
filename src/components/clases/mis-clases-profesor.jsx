@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import * as z from "zod";
 import { useClassesStore } from "../../stores/classes-store"; // ya está usando el store correcto
 
