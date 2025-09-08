@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SideBarAlumno from "../../components/sidebar/sidebar-alumno";
 import DashBoard from "../../components/dashboard/dashboard";
 import Calendario from "../../components/calendario/Calendario";
+import UnirseClase from "../../components/clases/unirse-clase";
 
 export default function HomeAlumno() {
   // Vista inicial: dashboard
@@ -11,6 +12,7 @@ export default function HomeAlumno() {
   const componentes = {
     dashboard: <DashBoard />,
     calendario: <Calendario />,
+    unirse: <UnirseClase />,
   };
 
   return (

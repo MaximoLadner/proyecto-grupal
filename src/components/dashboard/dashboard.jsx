@@ -14,7 +14,7 @@ export default function DashBoard() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white p-6 rounded-lg shadow">
                 <div className="flex items-center">
-                  <div className="ml-4">Cosas a msotrar</div>
+                  <div className="ml-4">Cosas a mostrar</div>
                 </div>
               </div>
 

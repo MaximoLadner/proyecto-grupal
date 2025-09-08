@@ -1,4 +1,5 @@
-import React from "react";
+import flechaIzq from "../../images/flecha-izquierda.png";
+import flechaDer from "../../images/flecha-derecha.png";
 
 export default function Calendario() {
   const weekDays = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
@@ -60,11 +61,19 @@ export default function Calendario() {
       <div className="pt-6 bg-white rounded-2xl shadow-sm">
         <div className="flex justify-between items-center mb-6">
           <button className="text-gray-500 hover:text-gray-700">
-            <span className="material-icons"> ⬅️ </span>
+            <img
+              src={flechaIzq}
+              alt="Flecha Izquierda"
+              className="w-5 h-5 ml-3"
+            />
           </button>
           <h2 className="text-xl font-semibold text-gray-800">Octubre 2024</h2>
           <button className="text-gray-500 hover:text-gray-700">
-            <span className="material-icons"> ➡️ </span>
+            <img
+              src={flechaDer}
+              alt="Flecha Derecha"
+              className="w-5 h-5 mr-3"
+            />
           </button>
         </div>
 
