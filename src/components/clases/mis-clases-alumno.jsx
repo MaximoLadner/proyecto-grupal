@@ -1,4 +1,4 @@
-export default function Classes() {
+export default function ClasesAlumno() {
   const clases = [
     {
       id: 1,

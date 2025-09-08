@@ -6,6 +6,7 @@ import UnirseClase from "../../components/clases/unirse-clase";
 import PerfilAlumno from "../../components/perfil/Perfil-Alumno";
 import burguer from "../../images/burger-menu.png";
 import { useSidebarStore } from "../../stores/sidebar-store";
+import ClasesAlumno from "../../components/clases/mis-clases-alumno";
 
 export default function HomeAlumno() {
   const [vista, setVista] = React.useState("dashboard");
@@ -30,6 +31,7 @@ export default function HomeAlumno() {
     calendario: <Calendario />,
     unirse: <UnirseClase />,
     perfil: <PerfilAlumno />,
+    clases: <ClasesAlumno />,
   };
 
   // Detecta si es mobile
