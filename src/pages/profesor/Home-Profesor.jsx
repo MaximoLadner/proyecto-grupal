@@ -14,11 +14,11 @@ export default function HomeProfesor() {
   };
 
   return (
-    <main className="flex flex-row  gap-[1rem] p-[1rem] bg-gray-200">
+    <main className="flex flex-row  gap-[1rem] p-[1rem] bg-gray-200 h-screen">
       {/* Sidebar controla la vista */}
       <SideBarProfesor onChangeVista={setVista} />
 
-      <section className="flex-1 flex flex-col gap-4">
+      <section className="flex-1 flex flex-col gap-4 h-full">
         {/* Header */}
         <div className="flex items-center justify-center text-2xl h-20 rounded-2xl bg-white">
           <h1>Header</h1>

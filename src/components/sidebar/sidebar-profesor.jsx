@@ -8,13 +8,13 @@ import cerrarSesion from "../../images/cerrar-sesion-de-usuario.png";
 
 export default function SideBarProfesor({ onChangeVista }) {
   return (
-    <aside className="flex flex-col justify-between gap-1 bg-white shadow-gray-300 rounded-2xl w-fit text-[#0D0E0E]">
+    <aside className="flex flex-col justify-between gap-1 p-3 bg-white shadow-gray-300 rounded-2xl w-fit text-[#0D0E0E]">
       <div className="gap-1">
         {/* Datos profesor */}
-        <div className="w-55 flex flex-row items-center gap-2 ml-4">
+        <div className="w-55 flex flex-row items-center gap-2 ml-4 mt-1.5">
           <img
             src=""
-              alt="foto profesor"
+            alt="foto profesor"
             className="rounded-[50%] shadow-gray-300 shadow-2xl w-14 h-14"
           />
           <div className="ml-4">

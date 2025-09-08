@@ -41,13 +41,13 @@ export default function HomeAlumno() {
         />
 
         {/* SIDEBAR */}
-        <aside
+        {/* <aside
           className={`fixed z-40 md:static top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 md:translate-x-0 ${
             sidebarOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
-          <SideBarAlumno onChangeVista={setVista} />
-        </aside>
+        </aside> */}
+        <SideBarAlumno onChangeVista={setVista} />
 
         {/* CONTENIDO */}
         <main className="flex-1 p-4 overflow-y-auto">
