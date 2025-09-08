@@ -20,8 +20,10 @@ export default function HomeAlumno() {
   return (
     <div className="flex flex-col h-screen bg-gray-100">
       {/* HEADER */}
+
+      {/* Botón menú (solo móvil) */}
+      {/*       
       <header className="bg-white shadow-md p-4 flex justify-between items-center">
-        {/* Botón menú (solo móvil) */}
         <button
           className="text-gray-600 md:hidden"
           onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -30,8 +32,7 @@ export default function HomeAlumno() {
         </button>
 
         <h1 className="text-xl font-semibold text-gray-800">Header</h1>
-        <div className="w-8"></div>
-      </header>
+      </header> */}
 
       <div className="flex flex-1">
         {/* Overlay oscuro en mobile */}
@@ -53,7 +54,7 @@ export default function HomeAlumno() {
 
         {/* CONTENIDO */}
         <main className="flex-1 p-4 overflow-y-auto">
-          <div className="rounded-2xl bg-white p-4 h-full">
+          <div className="rounded-2xl bg-gray-100 p-4 h-full">
             {componentes[vista]}
           </div>
         </main>
