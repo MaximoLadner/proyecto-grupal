@@ -75,11 +75,18 @@ export default function Calendario() {
   };
 
   const manejarClicDia = (dia) => {
-    setDiaSeleccionado(dia);
-    const clave = `${anioActual}-${String(mesActual + 1).padStart(2, "0")}-${String(dia).padStart(2, "0")}`;
-    setTextoEvento(""); // Empezamos con input vacío
-    setMostrarPopup(true);
-  };
+  const fechaSeleccionada = new Date(anioActual, mesActual, dia);
+
+  // Verificar si la fecha seleccionada es anterior a hoy
+  if (fechaSeleccionada < new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate())) {
+    alert("No se puede agregar un evento en días anteriores al día de hoy.");
+    return;
+  }
+
+  setDiaSeleccionado(dia);
+  setTextoEvento(""); // Empezamos con input vacío
+  setMostrarPopup(true);
+};
 
   const guardarEvento = () => {
     const clave = `${anioActual}-${String(mesActual + 1).padStart(2, "0")}-${String(diaSeleccionado).padStart(2, "0")}`;

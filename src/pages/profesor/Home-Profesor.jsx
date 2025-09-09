@@ -3,6 +3,7 @@ import SideBarProfesor from "../../components/sidebar/sidebar-profesor";
 import Calendario from "../../components/calendario/Calendario";
 import DashBoard from "../../components/dashboard/dashboard";
 import MisClases from "../../components/clases/mis-clases-profesor";
+import Header from "../general/header";
 export default function HomeProfesor() {
   const [vista, setVista] = useState("dashboard");
 
@@ -19,9 +20,9 @@ export default function HomeProfesor() {
 
       <section className="flex-1 flex flex-col gap-4 h-full">
         {/* Header */}
-        <div className="flex items-center justify-center text-2xl h-20 rounded-2xl bg-white">
-          <h1>Header</h1>
-        </div>
+        
+          {<Header />}
+        
 
         {/* Contenido dinámico */}
         <div className="flex-1 rounded-2xl bg-white p-4">
