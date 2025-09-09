@@ -2,19 +2,19 @@ import { useState, useEffect } from "react";
 import flechaIzq from "../../images/flecha-izquierda.png";
 import flechaDer from "../../images/flecha-derecha.png";
 
-export default function Calendario() {
+export default function Calendario({ esProfesor }) 
+{
   const diasSemana = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
-  
   const hoy = new Date();
+
   const [mesActual, setMesActual] = useState(hoy.getMonth());
   const [anioActual, setAnioActual] = useState(hoy.getFullYear());
-  
   const [diaSeleccionado, setDiaSeleccionado] = useState(null);
   const [eventos, setEventos] = useState({});
   const [mostrarPopup, setMostrarPopup] = useState(false);
   const [textoEvento, setTextoEvento] = useState("");
 
-  // Cargar eventos desde localStorage al iniciar
+  // Cargar eventos desde localStorage
   useEffect(() => {
     const eventosGuardados = localStorage.getItem("eventosCalendario");
     if (eventosGuardados) {
@@ -22,7 +22,7 @@ export default function Calendario() {
     }
   }, []);
 
-  // Guardar eventos en localStorage cuando cambian
+  // Guardar eventos en localStorage
   useEffect(() => {
     localStorage.setItem("eventosCalendario", JSON.stringify(eventos));
   }, [eventos]);
@@ -30,7 +30,6 @@ export default function Calendario() {
   const obtenerDiasDelMes = (mes, anio) => {
     const fecha = new Date(anio, mes, 1);
     const dias = [];
-
     const primerDiaSemana = fecha.getDay();
     const ultimoDiaMesAnterior = new Date(anio, mes, 0).getDate();
 
@@ -75,18 +74,18 @@ export default function Calendario() {
   };
 
   const manejarClicDia = (dia) => {
-  const fechaSeleccionada = new Date(anioActual, mesActual, dia);
+    if (!esProfesor) return; // 🚫 alumnos no pueden agregar eventos
+    const fechaSeleccionada = new Date(anioActual, mesActual, dia);
 
-  // Verificar si la fecha seleccionada es anterior a hoy
-  if (fechaSeleccionada < new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate())) {
-    alert("No se puede agregar un evento en días anteriores al día de hoy.");
-    return;
-  }
+    if (fechaSeleccionada < new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate())) {
+      alert("No se puede agregar un evento en días anteriores al día de hoy.");
+      return;
+    }
 
-  setDiaSeleccionado(dia);
-  setTextoEvento(""); // Empezamos con input vacío
-  setMostrarPopup(true);
-};
+    setDiaSeleccionado(dia);
+    setTextoEvento(""); 
+    setMostrarPopup(true);
+  };
 
   const guardarEvento = () => {
     const clave = `${anioActual}-${String(mesActual + 1).padStart(2, "0")}-${String(diaSeleccionado).padStart(2, "0")}`;
@@ -97,13 +96,12 @@ export default function Calendario() {
   };
 
   const nombresMeses = [
-    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+    "Enero","Febrero","Marzo","Abril","Mayo","Junio",
+    "Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"
   ];
 
   return (
     <div className="flex-1 mt-5">
-      {/* Calendario */}
       <div className="pt-6 bg-white rounded-2xl shadow-sm">
         <div className="flex justify-between items-center mb-6">
           <button onClick={manejarMesAnterior} className="text-gray-500 hover:text-gray-700">
@@ -126,7 +124,7 @@ export default function Calendario() {
             const clave = `${anioActual}-${String(mesActual + 1).padStart(2, "0")}-${String(d.dia).padStart(2, "0")}`;
             const eventosDia = eventos[clave] || [];
             return (
-              <button key={i} className="cursor-pointer" onClick={() => manejarClicDia(d.dia)}>
+              <button key={i} className={`${esProfesor ? "cursor-pointer" : ""}`} onClick={() => manejarClicDia(d.dia)}>
                 <div className={`relative bg-white p-1 h-14 text-right ${d.esMesActual ? "text-gray-800" : "text-gray-400"}`}>
                   {d.esHoy ? (
                     <span className="absolute top-2 right-2 bg-blue-500 text-white rounded-full h-6 w-6 flex items-center justify-center text-sm">
@@ -135,7 +133,6 @@ export default function Calendario() {
                   ) : (
                     <span>{d.dia}</span>
                   )}
-                  {/* Mostrar todos los eventos del día */}
                   {eventosDia.map((e, idx) => (
                     <div key={idx} className="absolute bottom-1 left-1 right-1 bg-yellow-200 text-xs text-gray-800 rounded px-1 truncate mt-1">
                       {e}
@@ -148,7 +145,6 @@ export default function Calendario() {
         </div>
       </div>
 
-      {/* Popup para agregar evento */}
       {mostrarPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
           <div className="bg-white rounded-lg p-6 w-80">
