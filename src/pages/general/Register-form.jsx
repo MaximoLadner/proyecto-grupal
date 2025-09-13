@@ -18,7 +18,7 @@ export default function RegisterForm() {
           <img
             src={imageRegister}
             alt="Registro"
-            className="w-64 h-auto rounded-xl shadow-lg md:w-56 lg:max-w-64"
+            className="w-64 h-auto rounded-xl shadow-lg md:w-80 lg:w-96"
           />
         </div>
 

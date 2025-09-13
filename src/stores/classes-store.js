@@ -13,6 +13,12 @@ export const useClassesStore = create(
         set((state) => ({
           classes: state.classes.filter((_, i) => i !== index),
         })),
+      editClass: (index, newName) =>
+        set((state) => ({
+          classes: state.classes.map((cls, i) =>
+            i === index ? { ...cls, name: newName } : cls
+          ),
+        })),
     }),
     {
       name: "classes", // clave en localStorage
