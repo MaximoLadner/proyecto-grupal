@@ -28,9 +28,13 @@ export default function MisClasesProfesor() {
 
   return (
     <div className="p-8">
-      <h2 className="text-2xl font-bold text-blue-800 mb-6">Clases Creadas</h2>
+      <h2 className="text-3xl font-bold text-gray-800 mb-8">Clases Creadas</h2>
       {classes.length === 0 ? (
-        <p className="text-gray-500">No hay clases creadas</p>
+        <div className="flex justify-center items-center h-115">
+          <p className="text-gray-500 font-bold text-center">
+            No hay clases creadas
+          </p>
+        </div>
       ) : (
         <div className="flex flex-col gap-6">
           {classes.map((cls, i) => (
