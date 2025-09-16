@@ -27,7 +27,7 @@ export default function SideBarProfesor({ onChangeVista }) {
         <div className="flex flex-col gap-2 mt-4 text-[#212122] font-normal ml-4">
           <button
             onClick={() => onChangeVista("clases")}
-            className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-sm transition-all duration-200"
+            className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-lg hover:scale-105 ease-in-out duration-400"
           >
             <img src={mas} alt="Signo de mas" className="w-5 h-5 mr-1" />
             Nueva clase
@@ -35,7 +35,7 @@ export default function SideBarProfesor({ onChangeVista }) {
 
           <button
             onClick={() => onChangeVista("verClases")}
-            className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-sm transition-all duration-200"
+            className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-lg hover:scale-105  ease-in-out duration-400"
           >
             <img src={list} alt="svg de una lista" className="w-5 h-5 mr-1" />
             Mis clases
@@ -43,7 +43,7 @@ export default function SideBarProfesor({ onChangeVista }) {
 
           <button
             onClick={() => onChangeVista("unirse")}
-            className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-sm transition-all duration-200"
+            className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-lg hover:scale-105  ease-in-out duration-400"
           >
             <img src={unirse} alt="svg de un numero" className="w-5 h-5 mr-1" />
             Registrar calificaciones
@@ -51,7 +51,7 @@ export default function SideBarProfesor({ onChangeVista }) {
 
           <button
             onClick={() => onChangeVista("calendario")}
-            className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-sm transition-all duration-200"
+            className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-lg hover:scale-105 ease-in-out duration-400"
           >
             <img
               src={calendario}
@@ -67,7 +67,7 @@ export default function SideBarProfesor({ onChangeVista }) {
       <div className="ml-4">
         <button
           onClick={() => onChangeVista("perfil")}
-          className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 font-normal text-gray-700 hover:bg-[#137fec] hover:text-white hover:shadow-sm transition-all duration-200"
+          className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-lg hover:scale-105  ease-in-out duration-400"
         >
           <img src={perfil} alt="svg de perfil" className="w-8 h-8" />
           Mi Perfil
@@ -75,7 +75,7 @@ export default function SideBarProfesor({ onChangeVista }) {
 
         <button
           onClick={() => alert("Cerrar sesión")} // acá podrías disparar logout real
-          className="w-55 text-left ml-0 rounded-2xl flex flex-row h-12 items-center gap-1 font-medium text-gray-700 hover:bg-[#137fec] hover:text-white hover:shadow-sm transition-all duration-200"
+          className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-lg hover:scale-105  ease-in-out duration-400"
         >
           <img
             src={cerrarSesion}
