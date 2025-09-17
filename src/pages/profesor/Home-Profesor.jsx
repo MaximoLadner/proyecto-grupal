@@ -2,7 +2,6 @@ import { useState, version } from "react";
 import SideBarProfesor from "../../components/sidebar/sidebar-profesor";
 import Calendario from "../../components/calendario/Calendario";
 import DashBoard from "../../components/dashboard/dashboard";
-import NuevasClases from "../../components/clases/nueva-clase-profesor";
 import MisClasesProfesor from "../../components/clases/mis-clases-profesor";
 import Header from "../general/header";
 
@@ -10,7 +9,6 @@ export default function HomeProfesor() {
   const [vista, setVista] = useState("dashboard");
 
   const componentes = {
-    clases: <NuevasClases />,
     calendario: <Calendario esProfesor={true} />,
     dashboard: <DashBoard />,
     verClases: <MisClasesProfesor />,

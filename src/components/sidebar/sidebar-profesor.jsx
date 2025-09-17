@@ -1,10 +1,9 @@
-import React from "react";
-import mas from "../../images/mas.png";
 import list from "../../images/list.png";
 import unirse from "../../images/unirse.png";
 import calendario from "../../images/calendario.png";
 import perfil from "../../images/perfil.png";
 import cerrarSesion from "../../images/cerrar-sesion-de-usuario.png";
+import dashboard from "../../images/dashboard.png";
 
 export default function SideBarProfesor({ onChangeVista }) {
   return (
@@ -26,11 +25,11 @@ export default function SideBarProfesor({ onChangeVista }) {
         {/* Menú principal */}
         <div className="flex flex-col gap-2 mt-4 text-[#212122] font-normal ml-4">
           <button
-            onClick={() => onChangeVista("clases")}
+            onClick={() => onChangeVista("dashboard")}
             className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-lg hover:scale-105 ease-in-out duration-400"
           >
-            <img src={mas} alt="Signo de mas" className="w-5 h-5 mr-1" />
-            Nueva clase
+            <img src={dashboard} alt="Signo de mas" className="w-5 h-5 mr-1" />
+            Dashboard
           </button>
 
           <button
