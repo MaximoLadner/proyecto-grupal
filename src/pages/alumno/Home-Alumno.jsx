@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SideBarAlumno from "../../components/sidebar/sidebar-alumno";
 import DashBoard from "../../components/dashboard/dashboard";
 import Calendario from "../../components/calendario/Calendario";
@@ -10,7 +10,7 @@ import ClasesAlumno from "../../components/clases/mis-clases-alumno";
 import Header from "../general/header";
 
 export default function HomeAlumno() {
-  const [vista, setVista] = React.useState("dashboard");
+  const [vista, setVista] = useState("dashboard");
   const isOpen = useSidebarStore((state) => state.isOpen);
   const setOpen = useSidebarStore((state) => state.setOpen);
   const toggle = useSidebarStore((state) => state.toggle);
@@ -33,6 +33,7 @@ export default function HomeAlumno() {
     unirse: <UnirseClase />,
     perfil: <PerfilAlumno />,
     clases: <ClasesAlumno />,
+    header: <Header />,
   };
 
   // Detecta si es mobile
@@ -41,6 +42,7 @@ export default function HomeAlumno() {
   return (
     
     <div className="flex flex-col h-screen bg-gray-100">
+      {" "}
       {/* HEADER SOLO EN MOBILE */}
       <header className="flex bg-white shadow-md p-4 md:hidden justify-between items-center pr-8 pl-5">
         <h1 className="text-xl font-semibold text-gray-800">Notus</h1>
@@ -54,7 +56,6 @@ export default function HomeAlumno() {
           </span>
         </button>
       </header>
-
       <div className="flex flex-1 relative">
         {/* SIDEBAR: el componente ya es un <aside> */}
         {/* En mobile: fixed, z-50, tapa el contenido. En desktop: normal */}
@@ -77,8 +78,9 @@ export default function HomeAlumno() {
         )}
 
         {/* CONTENIDO */}
-        <main className="flex-1 p-4 overflow-y-auto">
-          <div className="rounded-2xl bg-gray-100 p-4 h-full">
+        <main className="flex-1 w-full p-4 overflow-y-auto">
+          <div className="flex-1 rounded-2xl bg-gray-100">
+            <Header />
             {componentes[vista]}
           </div>
         </main>

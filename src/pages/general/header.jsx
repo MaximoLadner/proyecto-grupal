@@ -1,9 +1,8 @@
-export default function Header() 
-{
+export default function Header() {
   const fecha = new Date().toLocaleDateString("es-ES", {
     weekday: "long",
     day: "numeric",
-    month: "long"
+    month: "long",
   });
 
   return (
