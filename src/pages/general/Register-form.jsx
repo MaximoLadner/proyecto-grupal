@@ -10,7 +10,7 @@ export default function RegisterForm() {
   return (
     <>
       <div
-        className="relative flex  flex-col items-center justify-center overflow-x-hidden bg-gray-50 p-4 md:flex-row md:items-center md:justify-center md:p-6"
+        className="relative flex  flex-col items-center justify-center overflow-y-hidden bg-gray-50 p-4 md:flex-row md:items-center md:justify-center md:p-6"
         style={{ fontFamily: "Roboto, sans-serif" }}
       >
         {/* Columna izquierda (imagen en desktop pero desaparece en mobile) */}
@@ -91,6 +91,20 @@ export default function RegisterForm() {
                       className="form-input w-full rounded-md border border-gray-300 px-3 py-3 text-sm sm:px-4 sm:py-3 sm:text-base"
                       id="password"
                       placeholder="Crea una contraseña segura"
+                      type="password"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <label
+                      className="text-sm font-medium text-gray-700"
+                      htmlFor="password"
+                    >
+                      Confirma tu contraseña
+                    </label>
+                    <input
+                      className="form-input w-full rounded-md border border-gray-300 px-3 py-3 text-sm sm:px-4 sm:py-3 sm:text-base"
+                      id="password"
+                      placeholder="Confirma tu contraseña"
                       type="password"
                     />
                   </div>

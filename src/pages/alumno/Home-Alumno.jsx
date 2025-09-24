@@ -7,6 +7,7 @@ import PerfilAlumno from "../../components/perfil/Perfil-Alumno";
 import burguer from "../../images/burger-menu.png";
 import { useSidebarStore } from "../../stores/sidebar-store";
 import ClasesAlumno from "../../components/clases/mis-clases-alumno";
+import Header from "../general/header";
 
 export default function HomeAlumno() {
   const [vista, setVista] = React.useState("dashboard");
@@ -38,6 +39,7 @@ export default function HomeAlumno() {
   const isMobile = window.innerWidth < 768;
 
   return (
+    
     <div className="flex flex-col h-screen bg-gray-100">
       {/* HEADER SOLO EN MOBILE */}
       <header className="flex bg-white shadow-md p-4 md:hidden justify-between items-center pr-8 pl-5">
