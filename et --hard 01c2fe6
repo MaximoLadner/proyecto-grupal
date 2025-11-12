@@ -1,0 +1,46 @@
+[33mfcbbcb5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mprod[m[33m)[m coneccion del back
+[33m01c2fe6[m[33m ([m[1;31morigin/prod[m[33m)[m agregue el input de confirmar contraseña
+[33m9543938[m agregue el input de confirmar contraseña
+[33m2092011[m Agregando componente Header al HomeAlumno
+[33m915fb3d[m agrgue un popup en clases, cuando se aprete 'Ver alumnos'
+[33m32e3e3e[m Adaptando para tener solo 1 componente Clases conmo profesor, manejando todo desde ese componente, añadir,eliminar y editar clase.Tambien se agrego el button ver alumnos el cual futuramente tendra la función
+[33me35d822[m hover en los botones de profesor
+[33m40ad381[m Arreglando boludeces
+[33m257a099[m Actualizando pop-ups, creando MisClases para que los profesores puedan ver las clases creadas en NuevaClase, y creando un nuevo 'metodo' llamado editClass que por ahora solo permite cambiar el nombre a la clase.
+[33m1559566[m arreglando que el alumno no pueda agregar eventos en el calendario
+[33m58f7be4[m hice el header e hice validaciones de calendario
+[33ma431a79[m Nombre en Readme
+[33m981454a[m Nombre en Readme
+[33me64759f[m Mis clases Alumno
+[33ma633a7e[m Menu mobile Home Alumno
+[33mdd2b750[m Menu mobile alumno
+[33m144a881[m Estilos
+[33m047b3dd[m Agregando MisClases del lado del Alumno
+[33m8c76c99[m Agregando MisClases  del lado del Alumno
+[33m9708156[m MQ Home Alumno, falta funcionalidad
+[33m7a2a007[m Estilos
+[33m0c31489[m le di funcionalidad a calendario
+[33m48383fc[m Agregando componente Mi Pefil, del apartado de Alumno
+[33md342b5a[m Fix en sidebar
+[33m2a4da78[m Vista de unirse a clase
+[33m6c12177[m Store y persistencia de clases
+[33m675507f[m Arreglo errores raros
+[33mdad5dfa[m Arreglo errores raros
+[33m42e882a[m responsive home-alumno
+[33mee0ac1f[m Agregando dashboard para visualizacion a la hora de iniciar la pàgina
+[33me9e30ce[m arreglando mis clases
+[33md4316c8[m Agregando iconos, Mis Clases completo sin persistencia, y resolviendo errores del calendario
+[33m82627f6[m Correccion home alumno
+[33m1922c37[m arreglando el quilmo de GaRRone
+[33mdf42693[m arregle el scroll generado por garrone
+[33mef8c8e3[m Arreglando calendario para que se vea etero en la pantalla
+[33maf43e5f[m merge de develop by Garrone
+[33m1d0099f[m Resolviendo conflicto en home-general.jsx
+[33m20e1dff[m Avances en Home-Profesor.jsx
+[33mce3b024[m Sidebar
+[33m09d5d3e[m Edicion ReadMe
+[33m71ad5b4[m Ordenado de carpetas y archivos
+[33m226b447[m Modificacion de boton en home-general
+[33mfde290f[m README actualizado, tecnologías y roles por añadir
+[33m9431a61[m agregue nuevos iconos
+[33m0e17801[m first commit

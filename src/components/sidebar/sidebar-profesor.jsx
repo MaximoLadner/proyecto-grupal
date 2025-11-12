@@ -1,49 +1,88 @@
-import React from "react";
-import { Link } from "wouter";
+import list from "../../images/list.png";
+import unirse from "../../images/unirse.png";
+import calendario from "../../images/calendario.png";
+import perfil from "../../images/perfil.png";
+import cerrarSesion from "../../images/cerrar-sesion-de-usuario.png";
+import dashboard from "../../images/dashboard.png";
 
-export default function SideBarProfesor() {
+export default function SideBarProfesor({ onChangeVista }) {
   return (
-    <aside className="flex flex-col justify-between gap-1 m-1 ml-1.5 p-3 bg-white shadow-gray-300 rounded-2xl w-fit h-247 text-[0D0E0E]">
+    <aside className="flex flex-col justify-between gap-1 p-3 bg-white shadow-gray-300 rounded-2xl w-fit text-[#0D0E0E]">
       <div className="gap-1">
-        <div className="w-55 flex flex-row items-center gap-2">
+        {/* Datos profesor */}
+        <div className="w-55 flex flex-row items-center gap-2 ml-4 mt-1.5">
           <img
             src=""
             alt="foto profesor"
             className="rounded-[50%] shadow-gray-300 shadow-2xl w-14 h-14"
           />
-          <div>
+          <div className="ml-4">
             <h4 className="font-semibold">Nombre Profesor</h4>
             <p className="text-gray-700 italic">email@email.com</p>
           </div>
         </div>
-        <div className="flex flex-col gap-2 mt-4 text-[#212122] font-normal">
-          <Link className="w-55 rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-sm">
-            <img src="" alt="svg de signo +" className="w-8 h-8" />
-            Nueva clase
-          </Link>
-          <Link className="w-55 rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-sm">
-            <img src="" alt="svg de una lista" className="w-8 h-8" />
+
+        {/* Menú principal */}
+        <div className="flex flex-col gap-2 mt-4 text-[#212122] font-normal ml-4">
+          <button
+            onClick={() => onChangeVista("dashboard")}
+            className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-lg hover:scale-105 ease-in-out duration-400"
+          >
+            <img src={dashboard} alt="Signo de mas" className="w-5 h-5 mr-1" />
+            Dashboard
+          </button>
+
+          <button
+            onClick={() => onChangeVista("verClases")}
+            className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-lg hover:scale-105  ease-in-out duration-400"
+          >
+            <img src={list} alt="svg de una lista" className="w-5 h-5 mr-1" />
             Mis clases
-          </Link>
-          <Link className="w-55 rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-sm">
-            <img src="" alt="svg de un numero" className="w-8 h-8" />
+          </button>
+
+          <button
+            onClick={() => onChangeVista("unirse")}
+            className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-lg hover:scale-105  ease-in-out duration-400"
+          >
+            <img src={unirse} alt="svg de un numero" className="w-5 h-5 mr-1" />
             Registrar calificaciones
-          </Link>
-          <Link className="w-55 rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-sm">
-            <img src="" alt="svg de un calendario" className="w-8 h-8" />
+          </button>
+
+          <button
+            onClick={() => onChangeVista("calendario")}
+            className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-lg hover:scale-105 ease-in-out duration-400"
+          >
+            <img
+              src={calendario}
+              alt="svg de un calendario"
+              className="w-5 h-5 mr-1"
+            />
             Calendario
-          </Link>
+          </button>
         </div>
       </div>
-      <div>
-        <Link className="w-55 rounded-2xl flex flex-row h-12 items-center gap-1 font-normal text-gray-700">
-          <img src="" alt="svg de perfil" className="w-8 h-8" />
+
+      {/* Sección inferior */}
+      <div className="ml-4">
+        <button
+          onClick={() => onChangeVista("perfil")}
+          className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-lg hover:scale-105  ease-in-out duration-400"
+        >
+          <img src={perfil} alt="svg de perfil" className="w-8 h-8" />
           Mi Perfil
-        </Link>
-        <Link className="w-55 rounded-2xl flex flex-row h-12 items-center gap-1 font-medium text-gray-700">
-          <img src="" alt="svg de cerrar sesion" className="w-8 h-8" />
+        </button>
+
+        <button
+          onClick={() => alert("Cerrar sesión")} // acá podrías disparar logout real
+          className="w-55 text-left rounded-2xl flex flex-row h-12 items-center gap-1 pr-1 pl-1 hover:bg-[#137fec] hover:text-white hover:shadow-lg hover:scale-105  ease-in-out duration-400"
+        >
+          <img
+            src={cerrarSesion}
+            alt="svg de cerrar sesion"
+            className="w-8 h-8"
+          />
           Cerrar sesión
-        </Link>
+        </button>
       </div>
     </aside>
   );

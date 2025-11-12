@@ -1,4 +1,4 @@
-# 📝 Proyecto Notas/Clases
+# 📝 NOTUS
 
 Notus es una plataforma educativa diseñada como una solución universal y pública para optimizar la gestión de calificaciones académicas. La plataforma está diseñada para ofrecer una herramienta potente y fluida, enfocada exclusivamente en la administración de exámenes para docentes y tutores.
 
@@ -36,7 +36,7 @@ Notus es una plataforma educativa diseñada como una solución universal y públ
 
 - Despliegue: [Netlify, Vercel, AWS, etc. (a decidir)]
 
-- Bibliotecas: React-Hook-Form, Wouter, Zustand
+- Bibliotecas: React-Hook-Form, Wouter, Zustand, ZOD
 
 ## 💡 Propósito y Alcance
 

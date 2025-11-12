@@ -1,13 +1,13 @@
 import { Route, Router } from "wouter";
 import React, { Suspense, lazy } from "react";
 import Spinner from "./components/spinners/spinner-global";
+import RegisterForm from "./pages/general/Register-form";
+import LoginForm from "./pages/general/Login-form";
 
 // Aca cargamos los componentes que van a tener el spinner.
 const HomeGeneral = lazy(() => import("./pages/general/home-general"));
-const RegisterForm = lazy(() => import("./pages/general/Register-form"));
-const LoginForm = lazy(() => import("./pages/general/Login-form"));
 const HomeAlumno = lazy(() => import("./pages/alumno/Home-Alumno"));
-const HomeProfesor = lazy(() => import("./pages/profesor/Home-Profesor"));
+const HomeProfesor = lazy(() => import("./pages/profesor/home-profesor"));
 
 function App() {
   return (
