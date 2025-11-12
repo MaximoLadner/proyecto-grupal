@@ -1,75 +1,124 @@
-import { useState } from "react";
-import { useClassesStore } from "../../stores/classes-store";
+import { useState, useEffect } from "react";
 import * as z from "zod";
 import alumno from "../../images/graduado.png";
 import clasesIcon from "../../images/clases-icon.png";
 import PopupEstudiantes from "../popup-component/popupEstudiantes";
 
 export default function Classes() {
+  const API_URL = "https://localhost:7140/api/class"; // ✅ tu endpoint del back
+
   const classSchema = z.object({
     name: z.string().min(1, "El nombre no puede estar vacío"),
   });
 
-  const addClass = useClassesStore((state) => state.addClass);
-  const classes = useClassesStore((state) => state.classes);
-  const deleteClass = useClassesStore((state) => state.deleteClass);
-  const editClass = useClassesStore((state) => state.editClass);
-
-  // Estados generales
+  // Estados
+  const [classes, setClasses] = useState([]);
   const [showModal, setShowModal] = useState(false);
-  const [editIndex, setEditIndex] = useState(null);
+  const [editId, setEditId] = useState(null);
   const [newName, setNewName] = useState("");
   const [showForm, setShowForm] = useState(false);
   const [newClass, setNewClass] = useState("");
+  const [loading, setLoading] = useState(true);
 
-  // Estados popup alumnos
+  // Popup alumnos
   const [showStudentsModal, setShowStudentsModal] = useState(false);
   const [currentStudents, setCurrentStudents] = useState([]);
   const [currentClassIndex, setCurrentClassIndex] = useState(null);
 
-  // Abrir modal alumnos
+  // ✅ Traer clases del backend
+  const fetchClasses = async () => {
+    try {
+      setLoading(true);
+      const res = await fetch(API_URL);
+      const data = await res.json();
+      setClasses(data);
+    } catch (error) {
+      console.error("Error al obtener las clases:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchClasses();
+  }, []);
+
+  // ✅ Agregar clase
+  const handleAddClass = async () => {
+    const result = classSchema.safeParse({ name: newClass });
+    if (!result.success) {
+      alert(result.error.errors[0].message);
+      return;
+    }
+
+    try {
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nombre: newClass }),
+      });
+      if (res.ok) {
+        await fetchClasses(); // recargar lista
+        setNewClass("");
+        setShowForm(false);
+      }
+    } catch (error) {
+      console.error("Error al agregar clase:", error);
+    }
+  };
+
+  // ✅ Editar clase
+  const handleEdit = async () => {
+    if (!newName.trim() || !editId) return;
+
+    try {
+      const res = await fetch(`${API_URL}/${editId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nombre: newName }),
+      });
+
+      if (res.ok) {
+        await fetchClasses(); // recargar lista
+        setShowModal(false);
+      }
+    } catch (error) {
+      console.error("Error al editar clase:", error);
+    }
+  };
+
+  // ✅ Eliminar clase
+  const handleDelete = async (id) => {
+    if (!window.confirm("¿Seguro que querés eliminar esta clase?")) return;
+
+    try {
+      const res = await fetch(`${API_URL}/${id}`, { method: "DELETE" });
+      if (res.ok) {
+        await fetchClasses();
+      }
+    } catch (error) {
+      console.error("Error al eliminar clase:", error);
+    }
+  };
+
+  // Abrir modal edición
+  const openModal = (id, name) => {
+    setEditId(id);
+    setNewName(name);
+    setShowModal(true);
+  };
+
+  // Popup alumnos
   const handleViewStudents = (clsIndex) => {
     setCurrentClassIndex(clsIndex);
     setCurrentStudents(classes[clsIndex].students || []);
     setShowStudentsModal(true);
   };
 
-  // Eliminar alumno
   const handleDeleteStudent = (studentIndex) => {
     const updatedStudents = [...currentStudents];
     updatedStudents.splice(studentIndex, 1);
     setCurrentStudents(updatedStudents);
-
-    // Actualizar store
-    const updatedClass = { ...classes[currentClassIndex], students: updatedStudents };
-    editClass(currentClassIndex, updatedClass.name, updatedClass.students);
-  };
-
-  // Editar clase
-  const handleEdit = () => {
-    if (newName.trim()) {
-      editClass(editIndex, newName.trim());
-      setShowModal(false);
-    }
-  };
-
-  // Abrir modal de edición
-  const openModal = (index, name) => {
-    setEditIndex(index);
-    setNewName(name);
-    setShowModal(true);
-  };
-
-  // Agregar nueva clase
-  const handleAddClass = () => {
-    const result = classSchema.safeParse({ name: newClass });
-    if (!result.success) {
-      alert(result.error.errors[0].message);
-      return;
-    }
-    addClass(newClass);
-    setNewClass("");
-    setShowForm(false);
   };
 
   return (
@@ -84,7 +133,7 @@ export default function Classes() {
         </button>
       </header>
 
-      {/* Modal de nueva clase */}
+      {/* Modal nueva clase */}
       {showForm && (
         <div className="fixed inset-0 bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50">
           <div className="bg-white rounded-2xl shadow-lg p-8 min-w-[300px] flex flex-col items-center">
@@ -115,7 +164,9 @@ export default function Classes() {
         </div>
       )}
 
-      {classes.length === 0 ? (
+      {loading ? (
+        <p className="text-gray-500 text-center">Cargando clases...</p>
+      ) : classes.length === 0 ? (
         <div className="flex justify-center items-center h-115">
           <p className="text-gray-500 font-bold text-center">
             No hay clases creadas
@@ -125,7 +176,7 @@ export default function Classes() {
         <div className="flex flex-col gap-6">
           {classes.map((cls, i) => (
             <div
-              key={i}
+              key={cls.id}
               className="bg-white rounded-2xl shadow-lg p-6 flex flex-row justify-between items-center border border-blue-200 hover:scale-[1.02] transition-transform duration-200"
             >
               <div className="flex items-center gap-5">
@@ -135,7 +186,7 @@ export default function Classes() {
                   className="h-15 w-15 rounded-full border-3 border-blue-400"
                 />
                 <h3 className="text-lg font-semibold text-blue-700">
-                  {cls.name}
+                  {cls.nombre}
                 </h3>
               </div>
               <div className="flex gap-2">
@@ -147,13 +198,13 @@ export default function Classes() {
                   Ver Alumnos
                 </button>
                 <button
-                  onClick={() => openModal(i, cls.name)}
+                  onClick={() => openModal(cls.id, cls.nombre)}
                   className="bg-green-500 text-white px-2 py-1 rounded hover:bg-green-600"
                 >
                   Editar
                 </button>
                 <button
-                  onClick={() => deleteClass(i)}
+                  onClick={() => handleDelete(cls.id)}
                   className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
                 >
                   Eliminar
