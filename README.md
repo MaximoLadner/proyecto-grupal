@@ -56,6 +56,7 @@ cd frontend
 npm run build
 
 🧩 6. Estructura del proyecto
+---------------------------------------------------------------------------
 ├── public/               # Archivos públicos (favicon, imágenes estáticas)
 ---------------------------------------------------------------------------
 ├── src/
