@@ -3,11 +3,13 @@ import React, { Suspense, lazy } from "react";
 import Spinner from "./components/spinners/spinner-global";
 import RegisterForm from "./pages/general/Register-form";
 import LoginForm from "./pages/general/Login-form";
+import HomeProfesor from "./pages/profesor/Home-Profesor"
+import HomeAlumno from "./pages/alumno/Home-Alumno";
 
 // Aca cargamos los componentes que van a tener el spinner.
 const HomeGeneral = lazy(() => import("./pages/general/home-general"));
 const HomeAlumno = lazy(() => import("./pages/alumno/Home-Alumno"));
-const HomeProfesor = lazy(() => import("./pages/profesor/home-profesor"));
+const HomeProfesor = lazy(() => import(HomeProfesor));
 
 function App() {
   return (
