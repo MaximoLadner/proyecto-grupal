@@ -44,8 +44,7 @@ Antes de comenzar, asegurate de tener instalado:
 
 git clone https://github.com/usuario/nombre-del-proyecto.git
 cd nombre-del-proyecto 
-Creá un archivo .env con:
-REACT_APP_API_URL=http://localhost:5000/api
+
 
 🧪 3. Ejecución en modo desarrollo
 cd frontend
